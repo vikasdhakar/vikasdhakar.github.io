@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Calculator</title>
+    <style>
+        .container {
+            display: block;
+            width: 65%;
+            margin: 0 auto;
+            padding: 8px;
+        }
+
+        .heading {
+            font-family: arial, helvetica, sans-serif;
+            font-size: 22px;
+            font-weight: bold;
+            color: #003366;
+            margin-bottom: 2px;
+        }
+
+        .sub-heading {
+            margin-bottom: 12px;
+        }
+
+        .sub-heading * {
+            font-family: arial, helvetica, sans-serif;
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 6px;
+        }
+
+        .main {
+            background: #eee;
+            border: solid 1px #bbbbbb;
+            padding: 12px;
+        }
+
+        .form-panel {
+            margin-bottom: 12px;
+        }
+
+        textarea[name="time"] {
+            width: 100%;
+            min-height: 200px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .buttons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .buttons button {
+            font-family: arial, helvetica, sans-serif;
+            font-size: 16px;
+            padding: 6px 8px;
+            margin: 0 6px 0 12px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .buttons button:hover {
+            opacity: 0.8;
+        }
+
+        .buttons #calculate {
+            background-color: #518428;
+            color: #fff;
+        }
+
+        .buttons #clear {
+            background-color: #7a7a7a;
+            color: #fff;
+        }
+
+        #output {
+            font-family: arial, helvetica, sans-serif;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="heading">Time Calculator in Expression</div>
+        <div class="sub-heading">
+            <p>Use this calculator to add two or more time values in the form of an expression.</p>
+            <p>The calculator automatically found time values in the string, An acceptable time expression has a
+                numeric value with "h|H" and "m|M" characters.</p>
+			<p>It follows 2 digit format</p>
+            <p>For Example:- I did my task in 45m and it takes 01h20m in preparation.</p>
+        </div>
+
+        <main class="main">
+            <div class="form-panel">
+                <textarea name="time" id="timeInput" cols="30" rows="10"></textarea>
+            </div>
+            <div class="buttons">
+                <button type="button" id="calculate" class="btn">Calculate</button>
+                <button type="reset" id="clear" class="btn btn-clear">Clear</button>
+            </div>
+
+            <div id="output">
+            </div>
+        </main>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
